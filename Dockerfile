@@ -2,7 +2,7 @@ FROM node:latest as node
 WORKDIR /app
 COPY ./angular .
 #RUN npm install -g npm@8.6.0
-RUN cd angular && npm install
+RUN pwd && ls && cd angular && npm install
 RUN npm run build --prod
 
 
